@@ -1,0 +1,133 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FF0066, #FF00FF);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #FF00FF, #FF0066);
+}
+
+/* Gradient text animation */
+.animate-gradient {
+  background: linear-gradient(
+    to right,
+    #FF0066,
+    #FF00FF,
+    #00FF00,
+    #FF0066
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Improved blur effect */
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Responsive Layout Enhancements */
+
+/* Flex containers switch to column on mobile */
+@media (max-width: 768px) {
+  .responsive-flex {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .responsive-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .responsive-text {
+    font-size: 1rem !important;
+  }
+
+  .responsive-gap {
+    gap: 1rem !important;
+  }
+
+  .responsive-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .responsive-hide-on-mobile {
+    display: none !important;
+  }
+
+  .responsive-full-width {
+    width: 100% !important;
+  }
+
+  .responsive-center {
+    justify-content: center !important;
+  }
+
+  .responsive-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
