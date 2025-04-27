@@ -1,12 +1,46 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Mail, Heart, Code, Coffee, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Instagram, Heart, Code, Coffee, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github size={20} />, url: 'https://github.com/sugumar33', label: 'GitHub' },
-    { icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/sugumar-m-a96b06292', label: 'LinkedIn' },
-    { icon: <Instagram size={20} />, url: 'https://www.instagram.com/megastarmsm', label: 'Instagram' },
-    { icon: <Mail size={20} />, url: 'mailto:sugus7215@gmail.com', label: 'Email' }
+    {
+      icon: <Linkedin size={20} />,
+      url: 'https://www.linkedin.com/in/sugumar-m-a96b06292',
+      label: 'LinkedIn',
+      color: '#0077B5'
+    },
+    {
+      icon: <Github size={20} />,
+      url: 'https://github.com/sugumar33',
+      label: 'GitHub',
+      color: '#333'
+    },
+    {
+      icon: <Instagram size={20} />,
+      url: 'https://www.instagram.com/megastarmsm',
+      label: 'Instagram',
+      color: '#E4405F'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H13.96c.13 3.211 3.483 3.312 4.588 2.029h3.178zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+        </svg>
+      ),
+      url: 'https://www.behance.net/sugumarsugu32',
+      label: 'Behance',
+      color: '#1769FF'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438-1.804.172-4.844 2.172-4.844 2.172s-1.667 1.105-3.334 1.105c-1.667 0-3.334-1.105-3.334-1.105s-3.17-.953-6.384-.438c-.35.11-.35.385 0 .495 3.17.953 6.384.438 6.384.438s1.667-1.105 3.334-1.105c1.667 0 3.334 1.105 3.334 1.105s3.17.953 6.384.438c.35-.11.35-.385 0-.495z"/>
+        </svg>
+      ),
+      url: 'https://dribbble.com/SugumarM',
+      label: 'Dribbble',
+      color: '#EA4C89'
+    }
   ];
 
   const FloatingEmoji = ({ emoji, delay = 0 }: { emoji: React.ReactNode; delay?: number }) => (
@@ -87,7 +121,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {['Home', 'About', 'Projects', 'Contact'].map((link, index) => (
+              {['Home', 'About', 'Projects', 'Contact'].map((link) => (
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
@@ -109,16 +143,19 @@ const Footer = () => {
             className="text-center md:text-right"
           >
             <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Connect</h4>
-            <div className="flex justify-center md:justify-end space-x-4">
-              {socialLinks.map((link, index) => (
+            <div className="flex space-x-4">
+              {socialLinks.map((link) => (
                 <motion.a
-                  key={index}
+                  key={link.url}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400"
-                  whileHover={{ y: -5, scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    color: link.color,
+                    y: -5
+                  }}
+                  className="text-gray-600 dark:text-gray-400 transition-all duration-300 hover:shadow-lg"
                 >
                   {link.icon}
                 </motion.a>
