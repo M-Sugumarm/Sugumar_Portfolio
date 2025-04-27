@@ -35,7 +35,7 @@ export default function Projects() {
       image: "/images/project2.jpg",
       tags: ["Figma","UI/UX", "Prototyping"],
       github: "https://github.com/M-Sugumarm/Codsoft-UI-UX/blob/main/Task%204%20Ecommerce.fig",
-      category: "Web",
+      category: "Mobile",
       color: "#4ECDC4"
     },
     {

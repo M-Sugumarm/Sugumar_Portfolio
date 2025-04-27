@@ -12,6 +12,7 @@ import Education from './components/Education';
 import Achievements from './components/Achievements';
 import InfiniteScrollText from './components/InfiniteScrollText';
 import ParallaxWrapper from './components/ParallaxWrapper';
+import Chatbot from './components/Chatbot';
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -66,6 +67,11 @@ const App = () => {
           <Education />
         </ParallaxWrapper>
 
+        {/* Achievements Section */}
+        <ParallaxWrapper offset={50}>
+          <Achievements />
+        </ParallaxWrapper>
+
         {/* Another Infinite Scroll */}
         <InfiniteScrollText 
           text="LETS WORK TOGETHER • CREATE SOMETHING AMAZING"
@@ -78,6 +84,7 @@ const App = () => {
 
         <Footer />
         <ScrollToTop />
+        <Chatbot />
       </div>
     </div>
   );

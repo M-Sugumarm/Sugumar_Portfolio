@@ -2,6 +2,7 @@ import { Download } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+//import CuteMovingChatbot from './CuteMovingChatbot';
 
 export default function About() {
   const [_, setActiveSkill] = useState<string | null>(null);
@@ -127,6 +128,8 @@ export default function About() {
               </Link>
             </motion.div>
           </motion.div>
+
+         
         </div>
       </div>
     </section>
