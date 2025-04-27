@@ -106,7 +106,7 @@ export default function About() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://drive.google.com/file/d/18rC1B1CCJUaigfFYkbcP9jD1Nm6hLQ-6/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1t6gNixH7aXz_x0KrJya4ao7onkEu_nJC/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
