@@ -2,6 +2,7 @@ import { Download } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import profileImage from '../images/Megastar1.jpeg';
 //import CuteMovingChatbot from './CuteMovingChatbot';
 
 export default function About() {
@@ -46,7 +47,7 @@ export default function About() {
           >
             <div className="relative group">
               <img
-                src="src/images/Megastar1.jpeg"
+                src={profileImage}
                 alt="Sugumar M"
                 className="w-56 h-56 rounded-full object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
               />
