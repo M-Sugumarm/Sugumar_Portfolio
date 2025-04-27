@@ -13,20 +13,20 @@ export default function Education() {
       degree: "B.Sc Computer Science",
       institution: "Nandha Arts and Science College",
       duration: "2021 - 2024",
-      score: "CGPA: 8.2",
+      score: "CGPA: 8.47",
       icon: <GraduationCap size={24} />
     },
     {
       degree: "Higher Secondary (HSC)",
       institution: "Velavan Matric Higher Secondary School",
-      duration: "2018 - 2020",
+      duration: "2020 - 2021",
       score: "81%",
       icon: <Award size={24} />
     },
     {
       degree: "Secondary School (SSLC)",
       institution: "Velavan Matric Higher Secondary School",
-      duration: "2017 - 2018",
+      duration: "2018 - 2019",
       score: "79%",
       icon: <Award size={24} />
     }
