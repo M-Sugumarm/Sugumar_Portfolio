@@ -18,7 +18,7 @@ const App = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <DynamicBackground />
       
       {/* Progress Bar */}
@@ -38,7 +38,7 @@ const App = () => {
         {/* Infinite Scroll Text */}
         <InfiniteScrollText 
           text="UI/UX DESIGNER • FRONTEND DEVELOPER • CREATIVE THINKER"
-          className="py-8 text-2xl font-bold text-gray-800/10 dark:text-white/10"
+          className="py-4 md:py-8 text-lg md:text-2xl font-bold text-gray-800/10 dark:text-white/10"
         />
 
         {/* About Section with Parallax */}
@@ -50,7 +50,7 @@ const App = () => {
         <InfiniteScrollText 
           text="HTML • CSS • JavaScript • React • TypeScript • Next.js • Tailwind"
           direction="right"
-          className="py-8 text-xl font-bold text-gray-800/10 dark:text-white/10"
+          className="py-4 md:py-8 text-base md:text-xl font-bold text-gray-800/10 dark:text-white/10"
         />
 
         <ParallaxWrapper offset={75}>
@@ -75,7 +75,7 @@ const App = () => {
         {/* Another Infinite Scroll */}
         <InfiniteScrollText 
           text="LETS WORK TOGETHER • CREATE SOMETHING AMAZING"
-          className="py-8 text-2xl font-bold text-gray-800/10 dark:text-white/10"
+          className="py-4 md:py-8 text-lg md:text-2xl font-bold text-gray-800/10 dark:text-white/10"
         />
 
         <ParallaxWrapper offset={25}>
