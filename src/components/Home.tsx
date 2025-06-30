@@ -152,10 +152,9 @@ export default function Home() {
                 >
                   {/* @ts-ignore: TypeScript false positive, greetings[] does have numeric index */}
                   <span className="text-pink-500">&gt;</span> {greetings[greetingIndex].text}
-<<<<<<< HEAD
-=======
+
                   {/* @ts-ignore: TypeScript false positive, greetings[] does have numeric index */}
->>>>>>> c4328e9 (Updated portfolio with new content)
+ 
                   <span className="text-xs md:text-sm text-gray-500 ml-2">({greetings[greetingIndex].lang})</span>
                 </motion.h2>
               </AnimatePresence>
@@ -211,10 +210,7 @@ export default function Home() {
                   whileHover={{ scale: 1.2 }}
                   className="p-2 rounded-full bg-gradient-to-r from-pink-500 to-indigo-500"
                 >
-<<<<<<< HEAD
-=======
-                  {/* @ts-ignore: TypeScript false positive, Lucide icon does have className */}
->>>>>>> c4328e9 (Updated portfolio with new content)
+
                   <ArrowDown className="text-white w-5 h-5 md:w-6 md:h-6" />
                 </motion.div>
               </Link>

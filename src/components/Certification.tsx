@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Certi, Coursera1, Coursera2 } from '../images';
-import DatabricksImg from '../images/Databricks.png';
+ import DatabricksImg from '../images/Databricks.png';
 
 interface Certification {
   id: string;
@@ -36,14 +36,14 @@ const certifications: Certification[] = [
     credentialUrl: 'https://www.coursera.org/account/accomplishments/records/LXWNAE5C40SW',
     image: Coursera2,
   },
-  {
-    id: '4',
-    title: 'Databricks',
-    issuer: 'Databricks',
-    date: 'April 2025',
-    credentialUrl: 'https://credentials.databricks.com/0e6be895-7d41-4a65-bf33-fda05328ddf0#acc.HIXoBkmp',
-    image: DatabricksImg,
-  },
+   {
+     id: '4',
+     title: 'Databricks',
+     issuer: 'Databricks',
+   date: 'April 2025',
+     credentialUrl: 'https://credentials.databricks.com/0e6be895-7d41-4a65-bf33-fda05328ddf0#acc.HIXoBkmp',
+     image: DatabricksImg,
+   },
 ];
 
 export default function Certification() {
