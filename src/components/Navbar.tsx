@@ -40,6 +40,7 @@ export default function Navbar() {
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
     { name: 'Projects', to: 'projects' },
+    { name: 'Certification', to: 'certification' },
     { name: 'Education', to: 'education' },
     { name: 'Achievements', to: 'achievements' },
     { name: 'Contact', to: 'contact' },
@@ -70,39 +71,39 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center">
-            <div className="flex items-center space-x-4 lg:space-x-6">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={800}
-                  activeClass="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400"
-                  className="cursor-pointer px-2 lg:px-3 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-400 transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            
-            {/* Theme toggle button for desktop */}
-            <div className="ml-4 lg:ml-8">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={toggleTheme}
-                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 shadow-sm"
-                aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-              >
-                {theme === 'light' ? (
-                  <Moon size={20} className="text-gray-700" />
-                ) : (
-                  <Sun size={20} className="text-amber-300" />
-                )}
-              </motion.button>
-            </div>
+<div className="flex items-center space-x-4 lg:space-x-6">
+  {menuItems.map((item: { name: string; to: string }) => (
+    <Link
+      key={item.name}
+      to={item.to}
+      spy={true}
+      smooth={true}
+      offset={-100}
+      duration={800}
+      activeClass="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400"
+      className="cursor-pointer px-2 lg:px-3 py-2 text-sm lg:text-base font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-400 transition-colors duration-200"
+    >
+      {item.name}
+    </Link>
+  ))}
+</div>
+
+{/* Theme toggle button for desktop */}
+<div className="ml-4 lg:ml-8">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={toggleTheme}
+    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 shadow-sm"
+    aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+  >
+    {theme === 'light' ? (
+      <Moon size={20} />
+    ) : (
+      <Sun size={20} />
+    )}
+  </motion.button>
+</div>
           </div>
 
           {/* Mobile menu button */}
@@ -115,12 +116,11 @@ export default function Navbar() {
               aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
             >
               {theme === 'light' ? (
-                <Moon size={18} className="text-gray-700" />
+                <Moon size={18} />
               ) : (
-                <Sun size={18} className="text-amber-300" />
+                <Sun size={18} />
               )}
             </motion.button>
-            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -158,33 +158,26 @@ export default function Navbar() {
               </svg>
             </motion.button>
           </div>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      <div 
-        className={`${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } md:hidden overflow-hidden transition-all duration-300 ease-in-out`}
-      >
-        <div className="px-4 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-inner">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.to}
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={800}
-              activeClass="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-gray-100 dark:bg-gray-800"
-              className="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:text-indigo-400 dark:hover:bg-gray-800 transition-colors duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </nav>
-  );
-}
+          <div className={`$
+            {isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
+            md:hidden overflow-hidden transition-all duration-300 ease-in-out`}
+          >
+            <div className="px-4 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-inner">
+              {/* @ts-ignore */}
+              {menuItems.map((item: { name: string; to: string }) => (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={800}
+                  activeClass="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-gray-100 dark:bg-gray-800"
+                  className="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:text-indigo-400 dark:hover:bg-gray-800 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>

@@ -13,6 +13,7 @@ import Achievements from './components/Achievements';
 import InfiniteScrollText from './components/InfiniteScrollText';
 import ParallaxWrapper from './components/ParallaxWrapper';
 import Chatbot from './components/Chatbot';
+import Certification from './components/Certification';
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -60,6 +61,11 @@ const App = () => {
         {/* Projects with Parallax */}
         <ParallaxWrapper offset={50}>
           <Projects />
+        </ParallaxWrapper>
+
+        {/* Certification Section */}
+        <ParallaxWrapper offset={50}>
+          <Certification />
         </ParallaxWrapper>
 
         {/* Education Section */}

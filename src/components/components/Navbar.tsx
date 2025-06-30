@@ -18,8 +18,8 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           <button onClick={() => setDarkMode(!darkMode)} className="p-2 hover:text-blue-500">
             {darkMode ? <Sun size={24} /> : <Moon size={24} />}
           </button>
-          <Link to="/" className="hover:text-blue-500">Home</Link>
-          <Link to="/projects" className="hover:text-blue-500">Projects</Link>
+          <a href="#home" className="hover:text-blue-500">Home</a>
+          <a href="#projects" className="hover:text-blue-500">Projects</a>
           <Link to="/admin" className="hover:text-blue-500">Admin</Link>
         </div>
       </div>

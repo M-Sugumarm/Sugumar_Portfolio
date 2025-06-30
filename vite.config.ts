@@ -10,5 +10,13 @@ export default defineConfig({
   server: {
     port: 5176,
     host: true // to expose the server to your network
+  },
+  build: {
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   }
 });

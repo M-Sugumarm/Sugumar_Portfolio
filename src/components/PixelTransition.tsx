@@ -86,10 +86,10 @@ function PixelTransition({
       }
     });
 
-    delayedCallRef.current = gsap.delayedCall(animationStepDuration, () => {
+    delayedCallRef.current = gsap.delayedCall(animationStepDuration, (() => {
       activeEl.style.display = activate ? 'block' : 'none';
       activeEl.style.pointerEvents = activate ? 'none' : '';
-    });
+    }) as unknown as Function);
 
     gsap.to(pixels, {
       display: 'none',
